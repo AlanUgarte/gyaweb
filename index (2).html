@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GYA DECO · Revestimientos decorativos para tu hogar</title>
+<meta name="description" content="Placas decorativas 3D y vinilos símil mármol. Elegí tus productos, armá el carrito y confirmá tu pedido por WhatsApp. Envíos a domicilio o retiro en local.">
+<meta property="og:title" content="GYA DECO · Revestimientos decorativos">
+<meta property="og:description" content="Armá tu pedido online y confirmalo por WhatsApp.">
+<meta name="theme-color" content="#1c1b19">
+<style>
+:root{--bg:#faf8f4;--card:#fff;--ink:#1c1b19;--mut:#6f6a60;--line:#e6e0d4;--gold:#b08d4a;--gold2:#d2ad6a;--dark:#1c1b19;--ok:#2f7a4d;--bad:#b3402f;--r:14px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Helvetica Neue",Arial,sans-serif;-webkit-text-size-adjust:100%}
+h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+img{max-width:100%;display:block}a{color:inherit}
+button{font:inherit;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.wrap{max-width:1240px;margin:0 auto;padding:0 18px}
+/* header */
+#hd{background:var(--dark);color:#f1ece2;position:sticky;top:0;z-index:40;padding-top:env(safe-area-inset-top)}
+#hd .wrap{display:flex;align-items:center;gap:16px;height:64px}
+.logo{font:400 22px Georgia,serif;letter-spacing:.32em;color:var(--gold2);text-decoration:none;white-space:nowrap}
+#hd nav{display:flex;gap:22px;margin-left:18px}#hd nav a{color:#cfc8ba;text-decoration:none;font-size:14px}#hd nav a:hover{color:var(--gold2)}
+.sp{flex:1}
+#q{background:#2a2825;border:1px solid #3a3733;color:#f1ece2;border-radius:22px;padding:9px 16px;width:240px;font-size:14px}
+#q::placeholder{color:#8f887a}
+.cartbtn{background:none;border:1px solid var(--gold);color:var(--gold2);border-radius:22px;padding:8px 16px;display:flex;gap:8px;align-items:center;font-size:14px}
+.cartbtn b{background:var(--gold);color:#1c1b19;border-radius:11px;min-width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;padding:0 6px}
+#aviso{background:var(--gold);color:#1c1b19;text-align:center;font-size:14px;padding:8px 14px}
+/* hero */
+.hero{background:radial-gradient(1200px 400px at 70% -10%,#3b362c 0,#1c1b19 60%);color:#f1ece2;padding:64px 0 58px;text-align:center}
+.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.12;margin:0 0 14px;letter-spacing:.02em}
+.hero h1 em{color:var(--gold2);font-style:normal}
+.hero p{max-width:640px;margin:0 auto 26px;color:#cfc8ba;font-size:17px}
+.btn{background:var(--gold);color:#1c1b19;border:0;border-radius:10px;padding:13px 22px;font-weight:700;display:inline-block;text-decoration:none;text-align:center}
+.btn:hover{background:var(--gold2)}.btn.o{background:none;border:1px solid var(--gold);color:var(--ink)}.btn.o:hover{background:#f3ece0}
+.btn.full{display:block;width:100%}.btn[disabled]{opacity:.5;cursor:not-allowed}
+.heroin{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.perks{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:34px;color:#cfc8ba;font-size:14px}.perks span::before{content:"✓ ";color:var(--gold2)}
+/* catálogo */
+section{padding:46px 0}h2.t{font-size:30px;margin:0 0 6px}.sub{color:var(--mut);margin:0 0 22px}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:20px;padding:7px 16px;font-size:14px}
+.chip.on{background:var(--dark);color:var(--gold2);border-color:var(--dark)}
+select.sort{margin-left:auto;border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 12px;font:inherit;font-size:14px}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(28,27,25,.12)}
+.ph{position:relative;aspect-ratio:4/3;background:#2a2825;cursor:pointer;overflow:hidden}.ph img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;top:10px;left:10px;background:var(--gold);color:#1c1b19;font-size:12px;font-weight:700;padding:3px 10px;border-radius:12px}.tag.no{background:#d9d3c6;color:#4a463e}
+.cb{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cat{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.nm{font-size:16px;line-height:1.3;margin:0;font-weight:600;cursor:pointer}
+.pr{font:400 24px Georgia,serif;margin-top:auto;padding-top:6px}.pr small{font:400 13px Arial;color:var(--mut)}
+.row2{display:flex;gap:8px;margin-top:8px}.row2 .btn{flex:1;padding:11px 10px;font-size:14px}
+/* cómo comprar */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.step b{font:400 34px Georgia,serif;color:var(--gold)}.step h3{margin:6px 0;font-size:19px}.step p{margin:0;color:var(--mut);font-size:15px}
+footer{background:var(--dark);color:#cfc8ba;padding:34px 0 90px;font-size:14px}footer .wrap{display:flex;gap:30px;flex-wrap:wrap;justify-content:space-between}footer a{color:var(--gold2)}
+/* modal producto */
+.ov{position:fixed;inset:0;background:rgba(15,14,12,.62);z-index:60;display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 14px}
+.ov.on{display:flex}
+.pm{background:var(--bg);border-radius:18px;width:100%;max-width:1000px;position:relative;margin:auto;overflow:hidden}
+.x{position:absolute;top:12px;right:12px;z-index:3;background:#fff;border:1px solid var(--line);border-radius:50%;width:38px;height:38px;font-size:20px;line-height:1}
+.pg{display:grid;grid-template-columns:1.1fr 1fr}
+.gal{padding:18px}.gal .main{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#2a2825}.gal .main img{width:100%;height:100%;object-fit:cover}
+.th{display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:4px}.th button{border:2px solid transparent;border-radius:8px;overflow:hidden;padding:0;flex:none;width:72px;height:54px;background:#2a2825}.th button.on{border-color:var(--gold)}.th img{width:100%;height:100%;object-fit:cover}
+.inf{padding:26px 26px 22px 8px;display:flex;flex-direction:column;gap:10px}.inf h2{font-size:28px;margin:0;line-height:1.2}
+.specs{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;font-size:14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0}.specs span:nth-child(odd){color:var(--mut)}
+.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;background:#fff;width:max-content}.qty button{background:none;border:0;width:40px;height:42px;font-size:20px}.qty input{width:54px;text-align:center;border:0;font:inherit;font-size:16px;background:none}
+.calc{background:#f3ece0;border-radius:12px;padding:14px;font-size:14px}.calc label{display:block;margin-bottom:6px;font-weight:600}.calc .r{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.calc input{width:110px;border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit;font-size:16px}
+.amb{padding:6px 26px 28px}.amb h3{font-size:22px;margin:0 0 4px}.amb p{margin:0 0 12px;color:var(--mut);font-size:14px}
+.ambg{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}.ambg div{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#2a2825;cursor:zoom-in}.ambg img{width:100%;height:100%;object-fit:cover}
+/* carrito */
+#cart{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--bg);z-index:70;transform:translateX(105%);transition:transform .25s;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.25)}
+#cart.on{transform:none}
+.ch{padding:16px 18px;padding-top:max(16px,env(safe-area-inset-top));background:var(--dark);color:#f1ece2;display:flex;align-items:center;justify-content:space-between}.ch h2{margin:0;font-size:22px}.ch .x{position:static}
+.cbody{flex:1;overflow-y:auto;padding:16px 18px}.cf{border-top:1px solid var(--line);padding:14px 18px;padding-bottom:max(14px,env(safe-area-inset-bottom));background:#fff}
+.li{display:grid;grid-template-columns:64px 1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:center}.li .ph{aspect-ratio:1;border-radius:8px}.li b{font-size:15px;line-height:1.25;display:block}.li small{color:var(--mut)}
+.li .qty{transform:scale(.88);transform-origin:left;margin-top:4px}.rm{background:none;border:0;color:var(--bad);font-size:13px;text-decoration:underline}
+.sm{display:flex;justify-content:space-between;padding:3px 0;font-size:15px}.sm.tot{font:400 22px Georgia,serif;padding-top:8px;border-top:1px solid var(--line);margin-top:6px}
+.hint{background:#f3ece0;border-radius:10px;padding:10px 12px;font-size:13.5px;margin:10px 0}
+.fm label{display:block;font-size:13px;color:var(--mut);margin:12px 0 4px}.fm input,.fm textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px;font:inherit;font-size:16px;background:#fff}
+.fm input:focus,.fm textarea:focus,.calc input:focus{outline:2px solid var(--gold);outline-offset:0}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.opt{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff;cursor:pointer;display:block;margin:0!important;color:var(--ink)!important}
+.opt input{width:auto;margin-right:6px}.opt.on{border-color:var(--gold);background:#fbf5ea}.opt small{display:block;color:var(--mut);margin-top:2px}
+.err{background:#fbeae6;color:var(--bad);border-radius:10px;padding:10px 12px;font-size:14px;margin-top:12px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.mbar{display:none}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(30px);background:var(--dark);color:#f1ece2;padding:11px 18px;border-radius:24px;font-size:14px;opacity:0;transition:.25s;z-index:90;pointer-events:none;max-width:92vw;text-align:center}#toast.on{opacity:1;transform:translateX(-50%)}
+.done{text-align:center;padding:40px 24px}.done .ck{width:68px;height:68px;border-radius:50%;background:var(--ok);color:#fff;font-size:36px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.empty{text-align:center;color:var(--mut);padding:50px 10px}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:95;display:none;align-items:center;justify-content:center;padding:20px}.lb.on{display:flex}.lb img{max-height:90vh;border-radius:8px}
+@media(max-width:860px){#hd nav,#q{display:none}.pg{grid-template-columns:1fr}.inf{padding:6px 20px 14px}.hero{padding:44px 0 40px}#grid{grid-template-columns:repeat(2,1fr);gap:12px}.card .nm{font-size:14px}.pr{font-size:20px}.cb{padding:10px 12px 12px}.row2{flex-direction:column}
+ .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:50;background:var(--dark);color:var(--gold2);border-radius:14px;padding:13px 18px;justify-content:space-between;align-items:center;box-shadow:0 6px 24px rgba(0,0,0,.35);border:0;font-size:15px;font-weight:700}.mbar.hide{display:none}
+ .ov{padding:0}.pm{border-radius:0;min-height:100vh}.opts{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header id="hd"><div class="wrap">
+  <a class="logo" href="#">GYA DECO</a>
+  <nav><a href="#catalogo">Catálogo</a><a href="#como">Cómo comprar</a><a href="#contacto">Contacto</a></nav>
+  <span class="sp"></span>
+  <input id="q" type="search" placeholder="Buscar productos…" aria-label="Buscar productos">
+  <button class="cartbtn" data-a="cart" aria-label="Abrir carrito">🛒 Carrito <b id="cn">0</b></button>
+</div></header>
+<div id="aviso" hidden></div>
+<main>
+  <section class="hero"><div class="wrap">
+    <h1>Transformá tus ambientes con <em>revestimientos decorativos</em></h1>
+    <p>Placas 3D y vinilos símil mármol listos para colocar. Elegí, armá tu pedido y confirmalo por WhatsApp en minutos.</p>
+    <div class="heroin"><a class="btn" href="#catalogo">Ver productos</a><a class="btn o" style="color:#f1ece2" href="#como">Cómo comprar</a></div>
+    <div class="perks"><span>Envíos a domicilio o retiro en local</span><span>Envío gratis en compras de más de <b id="pk">10</b> m²</span><span>Pedido simple por WhatsApp</span></div>
+  </div></section>
+  <section id="catalogo"><div class="wrap">
+    <h2 class="t">Nuestros productos</h2><p class="sub">Precios finales por unidad. Tocá un producto para ver fotos, medidas y ejemplos colocados.</p>
+    <div class="bar"><div id="chips" style="display:contents"></div>
+      <select class="sort" id="sort" aria-label="Ordenar"><option value="dest">Destacados</option><option value="min">Menor precio</option><option value="max">Mayor precio</option><option value="az">A–Z</option></select></div>
+    <div id="grid"><div class="empty" style="grid-column:1/-1">Cargando productos…</div></div>
+  </div></section>
+  <section id="como" style="background:#f3ece0"><div class="wrap">
+    <h2 class="t">Comprar es muy simple</h2><p class="sub">Sin registrarte ni pagar online: lo coordinamos por WhatsApp.</p>
+    <div class="steps">
+      <div class="step"><b>1</b><h3>Elegí tus productos</h3><p>Mirá las fotos, las medidas y calculá cuántas unidades necesitás para tus metros cuadrados.</p></div>
+      <div class="step"><b>2</b><h3>Completá el carrito</h3><p>Dejá tus datos y elegí si querés envío a domicilio o retiro en nuestro local.</p></div>
+      <div class="step"><b>3</b><h3>Confirmá por WhatsApp</h3><p>Te llevamos a WhatsApp con tu pedido listo. Lo revisamos y coordinamos pago y entrega.</p></div>
+    </div></div></section>
+</main>
+<footer id="contacto"><div class="wrap">
+  <div><div class="logo" style="font-size:18px">GYA DECO</div><p style="margin:8px 0 0">Revestimientos decorativos para tu hogar.</p></div>
+  <div id="fretiro"></div><div><b>Contacto</b><br><a id="fwa" href="#" target="_blank" rel="noopener">Escribinos por WhatsApp</a></div>
+  <div style="width:100%;border-top:1px solid #3a3733;padding-top:14px;font-size:13px;color:#8f887a">© <span id="yr"></span> GYA DECO. Los precios y la disponibilidad pueden cambiar. El pedido se confirma por WhatsApp.</div>
+</div></footer>
+
+<div class="ov" id="ovp" role="dialog" aria-modal="true" aria-label="Detalle del producto"></div>
+<aside id="cart" aria-label="Carrito"></aside>
+<div class="ov" id="ovd" role="dialog" aria-modal="true"></div>
+<button class="mbar" id="mbar" data-a="cart" aria-label="Ver carrito"><span>🛒 Ver carrito (<span id="mn">0</span>)</span><span id="mt"></span></button>
+<div class="lb" id="lb"><img alt=""></div>
+<div id="toast" role="status"></div>
+
+<script>
+// ====== CONFIGURACIÓN (la misma base de datos del sistema de gestión) ======
+const SB_URL="https://hgwvurzdcvnjtryzehea.supabase.co";
+const SB_KEY="sb_publishable_pt6zduM9WY4bBwmqA2qqWQ_PWIlh1eL";
+// ============================================================================
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money=v=>{v=+v||0;const w=Math.abs(v-Math.round(v))<.005;return"$ "+v.toLocaleString("es-AR",{minimumFractionDigits:w?0:2,maximumFractionDigits:2})};
+const nn=v=>(+v).toLocaleString("es-AR",{maximumFractionDigits:2});
+const rpc=async(f,a)=>{const h={"Content-Type":"application/json",apikey:SB_KEY};if(SB_KEY.startsWith("eyJ"))h.Authorization="Bearer "+SB_KEY;
+  let r;try{r=await fetch(`${SB_URL}/rest/v1/rpc/${f}`,{method:"POST",headers:h,body:JSON.stringify(a||{})})}catch(e){throw new Error("No pudimos conectar. Revisá tu conexión e intentá de nuevo.")}
+  const t=await r.text();let j=null;try{j=t?JSON.parse(t):null}catch(e){}
+  if(!r.ok)throw new Error((j&&(j.message||j.hint))||"Ocurrió un error. Intentá de nuevo.");return j};
+const toast=t=>{const e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("on"),2600)};
+const okimg=u=>/^(https?:\/\/|\/|data:image\/)/i.test(u||"")?u:null;
+const hue=s=>{let h=0;for(const c of String(s))h=(h*31+c.charCodeAt(0))%360;return h};
+const ph=(seed,label)=>{const h=hue(seed),svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(${h},16%,20%)"/><stop offset="1" stop-color="hsl(${h},22%,36%)"/></linearGradient><pattern id="p" width="44" height="44" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="22" height="22" fill="rgba(255,255,255,.05)"/></pattern></defs><rect width="400" height="300" fill="url(#g)"/><rect width="400" height="300" fill="url(#p)"/><text x="200" y="146" fill="#d2ad6a" font-family="Georgia,serif" font-size="30" text-anchor="middle" letter-spacing="7">IMAGEN</text><text x="200" y="180" fill="rgba(255,255,255,.6)" font-family="Arial" font-size="14" text-anchor="middle">${esc(String(label).slice(0,34))}</text></svg>`;return"data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg)};
+const imgs=p=>(p.imagenes||[]).map(okimg).filter(Boolean),ambs=p=>(p.ambientes||[]).map(okimg).filter(Boolean);
+const main=p=>imgs(p)[0]||ph(p.sku,p.nombre);
+
+let CFG={nombre:"GYA DECO",whatsapp:"5493412708638",costo_envio:null,envio_gratis_m2:10,activa:true},PRODS=[],F={q:"",cat:"",sort:"dest"},cart={},step="cart",last=null;
+try{cart=JSON.parse(localStorage.getItem("gya_cart_v1")||"{}")||{}}catch(e){cart={}}
+const save=()=>{try{localStorage.setItem("gya_cart_v1",JSON.stringify(cart))}catch(e){}};
+const P=id=>PRODS.find(p=>p.id==id);
+const maxq=p=>Math.max(0,Math.min(999,+p.max_pedido||0));
+const lines=()=>Object.entries(cart).map(([id,q])=>({p:P(id),q:+q})).filter(l=>l.p&&l.q>0);
+const calc=()=>{const L=lines();return{L,sub:L.reduce((a,l)=>a+l.q*l.p.precio,0),m2:L.reduce((a,l)=>a+(l.p.m2_unidad?l.q*l.p.m2_unidad:0),0),hasM2:L.some(l=>l.p.m2_unidad),n:L.reduce((a,l)=>a+l.q,0)}};
+const ship=(c,ent)=>{if(ent!="envio")return{txt:"Retiro en local · sin cargo",amt:0};if(c.hasM2&&c.m2>CFG.envio_gratis_m2)return{txt:"Envío gratis",amt:0,free:true};if(CFG.costo_envio!=null)return{txt:money(CFG.costo_envio),amt:+CFG.costo_envio};return{txt:"A coordinar por WhatsApp",amt:0,coord:true}};
+
+/* ---------- catálogo ---------- */
+function filtered(){let L=PRODS.filter(p=>(!F.cat||p.categoria==F.cat)&&(!F.q||(p.nombre+" "+(p.categoria||"")+" "+(p.descripcion||"")).toLowerCase().includes(F.q.toLowerCase())));
+  const s=F.sort;L=[...L].sort((a,b)=>s=="min"?a.precio-b.precio:s=="max"?b.precio-a.precio:s=="az"?a.nombre.localeCompare(b.nombre,"es"):(b.destacado-a.destacado)||0);return L}
+function renderGrid(){
+  const cats=[...new Set(PRODS.map(p=>p.categoria).filter(Boolean))];
+  $("#chips").innerHTML=cats.length>1?`<button class="chip ${F.cat?"":"on"}" data-a="cat" data-v="">Todos</button>`+cats.map(c=>`<button class="chip ${F.cat==c?"on":""}" data-a="cat" data-v="${esc(c)}">${esc(c)}</button>`).join(""):"";
+  const L=filtered();
+  $("#grid").innerHTML=L.length?L.map(p=>{const ult=p.disponible&&+p.max_pedido<=5;return`<article class="card"><div class="ph" data-a="open" data-id="${p.id}">${p.destacado?'<span class="tag">Destacado</span>':ult?'<span class="tag">Últimas unidades</span>':""}${!p.disponible?'<span class="tag no">Sin stock</span>':""}<img src="${main(p)}" alt="${esc(p.nombre)}" loading="lazy"></div>
+    <div class="cb">${p.categoria?`<div class="cat">${esc(p.categoria)}</div>`:""}<h3 class="nm" data-a="open" data-id="${p.id}">${esc(p.nombre)}</h3>
+    <div class="pr">${money(p.precio)} <small>${p.unidad?"por "+esc(p.unidad):"c/u"}${p.m2_unidad?` · ${money(p.precio/p.m2_unidad)}/m²`:""}</small></div>
+    <div class="row2"><button class="btn o" data-a="open" data-id="${p.id}">Ver detalle</button>${p.disponible?`<button class="btn" data-a="add" data-id="${p.id}">Agregar</button>`:`<a class="btn" target="_blank" rel="noopener" href="${wa("Hola! Quería consultar por disponibilidad de: "+p.nombre)}">Consultar</a>`}</div></div></article>`}).join(""):
+    `<div class="empty" style="grid-column:1/-1">${PRODS.length?"No encontramos productos con ese filtro.":"Estamos preparando el catálogo. Escribinos por WhatsApp y te asesoramos."}</div>`}
+const wa=t=>`https://wa.me/${CFG.whatsapp}?text=${encodeURIComponent(t)}`;
+
+/* ---------- detalle de producto ---------- */
+let gi=0;
+function openProd(id){const p=P(id);if(!p)return;gi=0;const im=imgs(p),am=ambs(p),all=im.length?im:[ph(p.sku,p.nombre)];
+  $("#ovp").innerHTML=`<div class="pm"><button class="x" data-a="closep" aria-label="Cerrar">×</button><div class="pg"><div class="gal"><div class="main" data-a="zoom"><img id="gm" src="${all[0]}" alt="${esc(p.nombre)}"></div>
+    ${all.length>1?`<div class="th">${all.map((u,i)=>`<button class="${i?"":"on"}" data-a="thumb" data-i="${i}" aria-label="Foto ${i+1}"><img src="${u}" alt=""></button>`).join("")}</div>`:""}</div>
+    <div class="inf">${p.categoria?`<div class="cat">${esc(p.categoria)}</div>`:""}<h2>${esc(p.nombre)}</h2>
+    <div class="pr" style="padding:0">${money(p.precio)} <small>${p.unidad?"por "+esc(p.unidad):"c/u"}</small></div>
+    ${p.descripcion?`<p style="margin:0;color:#4a463e">${esc(p.descripcion)}</p>`:""}
+    <div class="specs">${p.ancho_cm?`<span>Medidas</span><span>${nn(p.ancho_cm)} × ${nn(p.alto_cm)} cm</span><span>Superficie por unidad</span><span>${nn(p.m2_unidad)} m²</span><span>Precio por m²</span><span>${money(p.precio/p.m2_unidad)}</span>`:""}<span>Disponibilidad</span><span style="color:var(--${p.disponible?"ok":"bad"})">${p.disponible?(+p.max_pedido<=5?"Últimas unidades":"En stock"):"Sin stock"}</span></div>
+    ${p.m2_unidad&&p.disponible?`<div class="calc"><label for="cm2">¿Cuántos m² querés cubrir?</label><div class="r"><input id="cm2" type="number" inputmode="decimal" min="0" step="any" placeholder="Ej: 12"><span id="cres" class="m"></span></div></div>`:""}
+    ${p.disponible?`<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><div class="qty"><button data-a="dq" data-d="-1" aria-label="Menos">−</button><input id="pq" type="number" inputmode="numeric" min="1" max="${maxq(p)}" value="1" aria-label="Cantidad"><button data-a="dq" data-d="1" aria-label="Más">+</button></div><button class="btn" style="flex:1;min-width:180px" data-a="addq" data-id="${p.id}">Agregar al carrito</button></div>`:`<a class="btn" target="_blank" rel="noopener" href="${wa("Hola! Quería consultar por disponibilidad de: "+p.nombre)}">Consultar disponibilidad por WhatsApp</a>`}
+    </div></div>
+    <div class="amb"><h3>Así queda en tu hogar</h3><p>Ejemplos de ambientes con este producto colocado.</p><div class="ambg">${(am.length?am:[0,1,2]).map((u,i)=>`<div data-a="zoom2" data-s="${am.length?u:""}"><img src="${am.length?u:ph(p.sku+"amb"+i,"Ejemplo de ambiente "+(i+1))}" alt="Ejemplo de ambiente ${i+1} con ${esc(p.nombre)}" loading="lazy"></div>`).join("")}</div></div></div>`;
+  $("#ovp").classList.add("on");$("#ovp").scrollTop=0;document.body.style.overflow="hidden";
+  const c=$("#cm2");if(c)c.oninput=()=>{const m=+c.value;if(m>0){const n=Math.ceil(m/p.m2_unidad-1e-9);$("#pq").value=Math.min(n,maxq(p));$("#cres").textContent=`Necesitás ${n} unidades (cubren ${nn(n*p.m2_unidad)} m²)`+(n>maxq(p)?` · disponibles: ${maxq(p)}`:"")}else $("#cres").textContent=""}}
+const closeP=()=>{$("#ovp").classList.remove("on");document.body.style.overflow=""};
+
+/* ---------- carrito ---------- */
+function add(id,q){const p=P(id);if(!p||!p.disponible)return;const cur=+cart[id]||0,m=maxq(p),n=Math.min(m,cur+q);if(n<=cur&&q>0){toast("No hay más stock disponible de este producto");return}cart[id]=n;save();upd();toast("Agregado al carrito ✓")}
+function upd(){const c=calc();$("#cn").textContent=c.n;$("#mn").textContent=c.n;$("#mt").textContent=c.n?money(c.sub):"";$("#mbar").classList.toggle("hide",!c.n&&!$("#cart").classList.contains("on"));if($("#cart").classList.contains("on"))renderCart()}
+function openCart(s){step=s||"cart";$("#cart").classList.add("on");document.body.style.overflow="hidden";renderCart();$("#mbar").classList.add("hide")}
+function closeCart(){$("#cart").classList.remove("on");document.body.style.overflow="";upd()}
+function hintFree(c){if(!c.hasM2)return"";const f=CFG.envio_gratis_m2;return c.m2>f?`<div class="hint">🚚 ¡Tenés <b>envío gratis</b> a domicilio! (más de ${nn(f)} m²)</div>`:`<div class="hint">🚚 Te faltan <b>${nn(f-c.m2+0.005)} m²</b> más para tener envío gratis a domicilio.</div>`}
+function renderCart(){const c=calc(),el=$("#cart");
+  if(step=="cart"){el.innerHTML=`<div class="ch"><h2>Tu carrito</h2><button class="x" data-a="closec" aria-label="Cerrar">×</button></div><div class="cbody">${c.L.length?c.L.map(l=>`<div class="li"><div class="ph"><img src="${main(l.p)}" alt=""></div><div><b>${esc(l.p.nombre)}</b><small>${money(l.p.precio)} c/u</small><div class="qty"><button data-a="cq" data-id="${l.p.id}" data-d="-1" aria-label="Menos">−</button><input value="${l.q}" readonly aria-label="Cantidad"><button data-a="cq" data-id="${l.p.id}" data-d="1" aria-label="Más">+</button></div></div><div style="text-align:right"><b>${money(l.q*l.p.precio)}</b><br><button class="rm" data-a="rm" data-id="${l.p.id}">Quitar</button></div></div>`).join("")+hintFree(c):`<div class="empty">Tu carrito está vacío.<br><br><button class="btn" data-a="closec">Ver productos</button></div>`}</div>
+    ${c.L.length?`<div class="cf"><div class="sm"><span>Subtotal (${c.n} unid.)</span><b>${money(c.sub)}</b></div>${c.hasM2?`<div class="sm" style="color:var(--mut);font-size:14px"><span>Superficie total</span><span>${nn(c.m2)} m²</span></div>`:""}<p style="font-size:13px;color:var(--mut);margin:6px 0 12px">El envío se calcula en el próximo paso.</p><button class="btn full" data-a="checkout">Continuar con mis datos</button><button class="btn o full" style="margin-top:8px" data-a="closec">Seguir comprando</button></div>`:""}`}
+  else{const ent=($("input[name=ent]:checked")||{}).value||(last&&last.ent)||"retiro";renderForm(ent,c,vals())}}
+function renderForm(ent,c,v){v=v||{};const s=ship(c,ent),tot=c.sub+s.amt;
+  $("#cart").innerHTML=`<div class="ch"><h2>Tus datos</h2><button class="x" data-a="closec" aria-label="Cerrar">×</button></div><form class="cbody fm" id="fm" autocomplete="on" novalidate>
+   <div class="opts"><label class="opt ${ent=="retiro"?"on":""}"><input type="radio" name="ent" value="retiro" ${ent=="retiro"?"checked":""}><b>Retiro en local</b><small>${esc(CFG.retiro_direccion||"Coordinamos el horario")}${CFG.retiro_horario?" · "+esc(CFG.retiro_horario):""}</small></label>
+   <label class="opt ${ent=="envio"?"on":""}"><input type="radio" name="ent" value="envio" ${ent=="envio"?"checked":""}><b>Envío a domicilio</b><small>${s.free||ent!="envio"&&c.hasM2&&c.m2>CFG.envio_gratis_m2?"Gratis (más de "+nn(CFG.envio_gratis_m2)+" m²)":CFG.costo_envio!=null?money(CFG.costo_envio):"Costo a coordinar"}</small></label></div>
+   <label for="f_n">Nombre y apellido *</label><input id="f_n" name="nombre" autocomplete="name" value="${esc(v.nombre||"")}" maxlength="80">
+   <label for="f_t">Teléfono / WhatsApp * (con código de área)</label><input id="f_t" name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="Ej: 341 555 1234" value="${esc(v.telefono||"")}">
+   <label for="f_e">Email (opcional)</label><input id="f_e" name="email" type="email" autocomplete="email" value="${esc(v.email||"")}">
+   ${ent=="envio"?`<label for="f_d">Dirección *</label><input id="f_d" name="direccion" autocomplete="street-address" placeholder="Calle y número, piso/depto" value="${esc(v.direccion||"")}">
+   <div style="display:grid;grid-template-columns:2fr 1fr;gap:10px"><div><label for="f_l">Localidad *</label><input id="f_l" name="localidad" autocomplete="address-level2" value="${esc(v.localidad||"")}"></div><div><label for="f_c">C. postal</label><input id="f_c" name="cp" autocomplete="postal-code" inputmode="numeric" value="${esc(v.cp||"")}"></div></div>`:""}
+   <label for="f_o">Comentarios del pedido (opcional)</label><textarea id="f_o" name="obs" rows="2" maxlength="500" placeholder="Horarios, entre calles, dudas…">${esc(v.obs||"")}</textarea>
+   <div class="hp" aria-hidden="true"><label>No completar<input name="website" tabindex="-1" autocomplete="off"></label></div>
+   <div class="hint" style="margin-top:16px"><div class="sm"><span>Subtotal</span><span>${money(c.sub)}</span></div><div class="sm"><span>Entrega</span><span>${s.txt}</span></div><div class="sm tot"><span>Total</span><span>${money(tot)}${s.coord?" + envío":""}</span></div></div>
+   <div id="ferr"></div></form>
+   <div class="cf"><button class="btn full" id="send" data-a="send">Confirmar pedido y enviar por WhatsApp</button><button class="btn o full" style="margin-top:8px" data-a="back">← Volver al carrito</button><p style="font-size:12.5px;color:var(--mut);margin:8px 0 0;text-align:center">No se cobra nada ahora: GYA DECO confirma tu pedido, el stock y el pago por WhatsApp.</p></div>`;
+  $$("input[name=ent]").forEach(r=>r.onchange=()=>renderForm(r.value,calc(),vals()));last={ent}}
+const vals=()=>{const f=$("#fm");if(!f)return{};const g=n=>(f.elements[n]||{}).value||"";return{nombre:g("nombre"),telefono:g("telefono"),email:g("email"),direccion:g("direccion"),localidad:g("localidad"),cp:g("cp"),obs:g("obs"),website:g("website")}};
+
+async function send(){
+  const c=calc(),v=vals(),ent=($("input[name=ent]:checked")||{}).value||"retiro",err=m=>{$("#ferr").innerHTML=`<div class="err">${esc(m)}</div>`;$("#fm").scrollTo({top:$("#fm").scrollHeight,behavior:"smooth"})};
+  if(!c.L.length)return err("Tu carrito está vacío.");
+  if(v.nombre.trim().length<2)return err("Ingresá tu nombre y apellido.");
+  if(v.telefono.replace(/\D/g,"").length<8)return err("Ingresá un teléfono válido, con código de área.");
+  if(v.email.trim()&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.email.trim()))return err("El email no parece válido.");
+  if(ent=="envio"&&(v.direccion.trim().length<5||!v.localidad.trim()))return err("Para el envío necesitamos dirección y localidad.");
+  const b=$("#send");b.disabled=true;b.textContent="Enviando pedido…";
+  try{const o=await rpc("crear_pedido_web",{p:{nombre:v.nombre,telefono:v.telefono,email:v.email,entrega:ent,direccion:v.direccion,localidad:v.localidad,codigo_postal:v.cp,observaciones:v.obs,website:v.website,items:c.L.map(l=>({id:l.p.id,cantidad:l.q}))}});
+    cart={};save();upd();done(o,v,ent)}
+  catch(e){if(/ya no está disponible|stock/i.test(e.message))await load(true);const b2=$("#send");if(b2){b2.disabled=false;b2.textContent="Confirmar pedido y enviar por WhatsApp"}err(e.message)}}
+function waMsg(o,v,ent){const L=o.items.map(i=>`• ${nn(i.cantidad)} × ${i.descripcion} — ${money(i.total)}`).join("\n");
+  const envio=ent=="retiro"?"Retiro en local":o.envio_gratis?"Envío a domicilio (GRATIS)":o.envio_a_coordinar?"Envío a domicilio (a coordinar)":`Envío a domicilio: ${money(o.envio)}`;
+  return`Hola ${CFG.nombre}! Soy ${v.nombre.trim()}. Quiero confirmar mi pedido web #${o.numero}:\n\n${L}\n\nSubtotal: ${money(o.subtotal)}\n${envio}\nTOTAL: ${money(o.total)}${o.envio_a_coordinar?" + envío":""}\n\n`+(ent=="envio"?`Dirección: ${[v.direccion,v.localidad,v.cp].filter(x=>x&&x.trim()).join(", ")}\n`:"")+`Teléfono: ${v.telefono}\n`+(v.obs.trim()?`Comentarios: ${v.obs.trim()}\n`:"")+`\n¡Gracias!`}
+function done(o,v,ent){const url=wa(waMsg(o,v,ent));closeCart();$("#ovd").innerHTML=`<div class="pm" style="max-width:520px"><div class="done"><div class="ck">✓</div><h2 style="font-size:28px;margin:0 0 8px">¡Pedido #${o.numero} enviado!</h2><p style="color:var(--mut)">Total: <b>${money(o.total)}</b>${o.envio_a_coordinar?" + envío a coordinar":""}.<br>Te llevamos a WhatsApp para confirmarlo con GYA DECO. Si no se abre solo, tocá el botón.</p><a class="btn full" id="wal" href="${url}">Abrir WhatsApp</a><button class="btn o full" style="margin-top:10px" data-a="closed">Volver a la tienda</button></div></div>`;
+  $("#ovd").classList.add("on");document.body.style.overflow="hidden";setTimeout(()=>{if($("#ovd").classList.contains("on"))location.href=url},1600)}
+
+/* ---------- eventos ---------- */
+document.addEventListener("click",e=>{const b=e.target.closest("[data-a]");if(!b)return;const a=b.dataset.a,id=b.dataset.id;
+  if(a=="cat"){F.cat=b.dataset.v;renderGrid()}
+  else if(a=="open")openProd(id);else if(a=="add")add(id,1);
+  else if(a=="addq"){const q=Math.max(1,Math.floor(+$("#pq").value||1));add(id,q);closeP();openCart()}
+  else if(a=="dq"){const i=$("#pq");i.value=Math.max(1,Math.min(+i.max||999,(+i.value||1)+(+b.dataset.d)))}
+  else if(a=="thumb"){gi=+b.dataset.i;$("#gm").src=b.querySelector("img").src;$$(".th button").forEach(x=>x.classList.toggle("on",x==b))}
+  else if(a=="zoom"){$("#lb img").src=$("#gm").src;$("#lb").classList.add("on")}
+  else if(a=="zoom2"){$("#lb img").src=b.querySelector("img").src;$("#lb").classList.add("on")}
+  else if(a=="closep")closeP();else if(a=="closed"){$("#ovd").classList.remove("on");document.body.style.overflow=""}
+  else if(a=="cart")openCart();else if(a=="closec")closeCart();
+  else if(a=="cq"){const p=P(id),n=(+cart[id]||0)+(+b.dataset.d);if(n<=0){delete cart[id]}else if(n>maxq(p)){toast("No hay más stock disponible");return}else cart[id]=n;save();upd()}
+  else if(a=="rm"){delete cart[id];save();upd()}
+  else if(a=="checkout"){step="form";renderCart()}else if(a=="back"){step="cart";renderCart()}
+  else if(a=="send")send()});
+$("#ovp").addEventListener("click",e=>{if(e.target.id=="ovp")closeP()});$("#lb").addEventListener("click",()=>$("#lb").classList.remove("on"));
+document.addEventListener("keydown",e=>{if(e.key=="Escape"){if($("#lb").classList.contains("on"))$("#lb").classList.remove("on");else if($("#ovp").classList.contains("on"))closeP();else if($("#cart").classList.contains("on"))closeCart()}});
+$("#q").addEventListener("input",e=>{F.q=e.target.value;renderGrid()});$("#sort").addEventListener("change",e=>{F.sort=e.target.value;renderGrid()});
+
+/* ---------- carga ---------- */
+async function load(quiet){
+  try{const[cfg,cat]=await Promise.all([rpc("tienda_config_publica"),rpc("tienda_catalogo")]);
+    if(cfg&&cfg[0])CFG=Object.assign(CFG,cfg[0]);PRODS=(cat||[]).map(p=>({...p,precio:+p.precio,max_pedido:+p.max_pedido}));
+    for(const id of Object.keys(cart)){const p=P(id);if(!p||!p.disponible)delete cart[id];else if(cart[id]>maxq(p))cart[id]=maxq(p)}save()}
+  catch(e){if(!quiet)$("#grid").innerHTML=`<div class="empty" style="grid-column:1/-1">No pudimos cargar el catálogo en este momento.<br>${esc(e.message)}<br><br><button class="btn" onclick="load()">Reintentar</button></div>`;return}
+  if(CFG.aviso){$("#aviso").hidden=false;$("#aviso").textContent=CFG.aviso}
+  $("#pk").textContent=nn(CFG.envio_gratis_m2);$("#fwa").href=wa("Hola! Quería hacer una consulta.");
+  $("#fretiro").innerHTML=CFG.retiro_direccion?`<b>Retiro en local</b><br>${esc(CFG.retiro_direccion)}${CFG.retiro_horario?"<br>"+esc(CFG.retiro_horario):""}`:"";
+  if(CFG.activa===false)$("#aviso").hidden=false,$("#aviso").textContent="La tienda no está tomando pedidos por el momento. Escribinos por WhatsApp.";
+  renderGrid();upd()}
+$("#yr").textContent=new Date().getFullYear();load();
+</script>
+</body>
+</html>
